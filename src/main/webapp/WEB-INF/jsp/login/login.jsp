@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Log in</title>
+    <title>Log in Page</title>
 </head>
 <body>
 
