@@ -1,5 +1,4 @@
 package com.info.springsecurity.config;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,21 +28,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 //                    .antMatchers("/resources/**", "/WEB-INF/jsp/*").permitAll()
                 .antMatchers("/resources/**",
-                        "/registration**",
-                        "/js/**",
-                        "/css/**",
-                        "/img/**",
+                        "/registration**", "/signup**",
+                        "/executeSaveUser**", "/index**",
+                        "/browser/index.html/**",
+                        "/js/**", "/css/**", "/img/**",
                         "/webjars/**").permitAll()
                 .anyRequest().authenticated()
-                .and()
-                .formLogin()
+                .and().formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/welcome")
+                .defaultSuccessUrl("/index")
                 .failureUrl("/login?error")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll();
+                .permitAll().and().logout().permitAll();
     }
 
     @Autowired
