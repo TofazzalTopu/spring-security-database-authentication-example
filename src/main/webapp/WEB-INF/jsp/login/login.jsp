@@ -1,15 +1,11 @@
-<%--
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
---%>
-
-<%--<c:set var="contextPath" value="${pageContext.request.contextPath}"/>--%>
-
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
 <head>
-    <title>Log in Page</title>
+    <title>Log in</title>
+
+
 </head>
 <body>
 
@@ -49,17 +45,40 @@
                     </div>
                 </div>
                 <div class="form-group">
-						<span>New user? <a href="/registration">Register
+						<span>New user? <a href="/signup" href="${contextPath}/signup}">Register
 								here</a></span>
                 </div>
-
+                <div class="form-group">
+						<span id="showMore">To see Swagger and Actuator? <a href="#" href="#">Click
+								here</a></span>
+                </div>
             </form>
 
         </div>
     </div>
+    <div class="row" id="showHide">
+        <div class="col-md-6 col-md-offset-3">
+            <ul>
+                <li>Click here <a href="/swagger-ui.html" th:href="@{/swagger-ui.html}"> Swagger </a> to show Swagger
+                    Implementation
+                </li>
+            </ul>
+            <ul>
+                <li>Click here <a href="/browser/index.html#/actuator" th:href="@{//browser/index.html#/actuator}">
+                    Actuator </a> to show Actuator
+                    Implementation
+                </li>
+            </ul>
+
+            <ul>
+                <li><h3> Go to the <a href="/index" th:href="@{/index}"> Index
+                    pages</a></h3></li>
+            </ul>
+        </div>
+    </div>
 </div>
 
-<jsp:include page="../common/footer.jsp"/>
+<%--<jsp:include page="../common/footer.jsp"/>--%>
 
 </body>
 </html>
