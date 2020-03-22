@@ -14,9 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
+    <link href="${contextPath}/resources/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,6 +38,16 @@
         </div>
     </div>
 </nav>
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="${contextPath}/resources/js/main.js"></script>
+<script src="${contextPath}/resources/js/login.js"></script>
+<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${contextPath}/resources/js/4.3.1/twitter-bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="/resources/js/angular/user/user.js"></script>
 
 </body>
 </html>
